@@ -10,7 +10,6 @@ weather.addEventListener("submit", (e) => {
   )
     .then((response) => response.json())
     .then((data) => {
-      data.weather[0].description = "rain";
       console.log(data);
       card.innerHTML = `
         <h2 class="cityname">${data.name}</h2>
